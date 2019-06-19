@@ -1,0 +1,171 @@
+% Weka comments begin with a percentage sign
+% This file is an example of training data
+
+% The following line defines a relation called NLP Parse Tree to Class
+% Name Mapping. Since it contains space, it must be quoted.
+% It maps the root of a subtree and its immediate children to a class
+% name of the composite pattern.
+
+@relation 'NLP Parse Tree to Class Name Mapping'
+
+% The following lines defines the attributes (or features) of this
+% relation. In general, a relation may have many attributes but in
+% this case we have only two.
+% The first line specifies an attribute called "text" with type
+% string. The second line specifies an attribute "call" with
+% enumeration type with elements enclosed in the pair of "{" and "}."
+% Each attribute line must be one line. That is, multiple lines must
+% be joined to form one long line.
+
+@attribute text string
+@attribute class {SimpleSentence, Subclause, VerbingClause, IsA, ConjuctNouns}
+
+% The following line specifies that the data begins
+
+@data
+'(NP (DT (NN (NN (NN (CC (JJ (NN (NN', ConjunctiveNP
+'(NP (NNP', NounPhrase
+'(PRN (-LRB- (NP (-RRB-', Parentheses
+'(NP (NP (PRN', ParenthesesNP
+'(NP (DT (JJ (NN', NounPhrase
+'(NP (NN (CC (NN (NNS', ConjunctiveNP
+'(NP (NN (NN', NounPhrase
+'(NP (NNS', NounPhrase
+'(NP (NN (NN', NounPhrase
+'(NP (JJ (NNS', NounPhrase
+'(NP (NP (, (NP (, (NP (, (CC (NP', ComaSepConjunctiveNP
+'(PP (TO (NP', PrepositionPhrase
+'(VP (VBN (PP', VerbPhrase
+'(NP (NP (VP', NounPhrase
+'(VP (VB (CC (VB (NP', ConjunctiveVP
+'(VP (TO (VP', VerbPhrase
+'(S (VP', SimpleSentence
+'(VP (VBN (S', VerbPhrase
+'(NP (NP (VP', NounPhrase
+'(VP (VBZ (NP', VerbPhrase
+'(S (NP (VP (.', SimpleSentence
+'(ROOT (S', Root
+'(NP (DT (NN', unclassifiedTag
+'(NP (DT (JJ (NN (NN', unclassifiedTag
+'(NP (JJ (NN', unclassifiedTag
+'(VP (VP (CC (VP', unclassifiedTag
+'(S (NP (VP', unclassifiedTag
+'(SBAR (IN (S', unclassifiedTag
+'(NP (PRP$ (NN', unclassifiedTag
+'(NP (DT (JJ (JJ (NNS', unclassifiedTag
+'(PP (IN (NP', unclassifiedTag
+'(VP (VBZ (VP', unclassifiedTag
+'(S (SBAR (, (NP (VP (.', unclassifiedTag
+'(NP (DT (VBN (NN', unclassifiedTag
+'(ADJP (JJ', unclassifiedTag
+'(VP (VBZ (RB (ADJP', unclassifiedTag
+'(PRT (RP', unclassifiedTag
+'(VP (VBG (PRT', unclassifiedTag
+'(VP (VBG (NP (SBAR', unclassifiedTag
+'(VP (VB (NP', unclassifiedTag
+'(NP (DT', unclassifiedTag
+'(VP (VB (CC (VB', unclassifiedTag
+'(VP (VB (S', unclassifiedTag
+'(NP (NP (PP', unclassifiedTag
+'(VP (VP (CC (VP (, (CC (VP', unclassifiedTag
+'(VP (MD (VP', unclassifiedTag
+'(NP (NN', unclassifiedTag
+'(NP (EX', unclassifiedTag
+'(NP (DT (`` (JJ (JJ (NNS (NN (''', unclassifiedTag
+'(NP (DT (`` (NN (CD (NN (NN (NN', unclassifiedTag
+'(NP (NP (CC (NP', unclassifiedTag
+'(S (PP (, (NP (VP (. (''', unclassifiedTag
+'(NP (PRP', unclassifiedTag
+'(NP (DT (NNS', unclassifiedTag
+'(ADJP (JJ (CC (JJ', unclassifiedTag
+'(NP (ADJP (NN (NN', unclassifiedTag
+'(NP (CD', unclassifiedTag
+'(NP (CD (NNS', unclassifiedTag
+'(NP (NN (CC (NN', unclassifiedTag
+'(NP (NP (, (NP (CC (NP (, (CC (NP', unclassifiedTag
+'(PP (JJ (IN (NP', unclassifiedTag
+'(NP (NP (PP (, (PP', unclassifiedTag
+'(ADJP (JJ (PP', unclassifiedTag
+'(S (NP (ADJP', unclassifiedTag
+'(ADJP (JJ (S', unclassifiedTag
+'(VP (VBZ (S', unclassifiedTag
+'(ADVP (RB', unclassifiedTag
+'(NP (DT (NN (NN (NN', unclassifiedTag
+'(PP (ADVP (IN (NP', unclassifiedTag
+'(PP (PP (CC (PP (CC (PP', unclassifiedTag
+'(VP (VBP (NP (PP', unclassifiedTag
+'(S (ADVP (, (NP (VP (.', unclassifiedTag
+'(VP (VBN (PRT (PP', unclassifiedTag
+'(ADVP (RB (RB (SBAR', unclassifiedTag
+'(VP (VBN', unclassifiedTag
+'(WHADVP (WRB', unclassifiedTag
+'(SBAR (WHADVP (S', unclassifiedTag
+'(VP (VB (NP (SBAR', unclassifiedTag
+'(S (ADVP (NP (VP', unclassifiedTag
+'(NP (DT (NN (POS', unclassifiedTag
+'(NP (NP (NN', unclassifiedTag
+'(PP (JJ (PP', unclassifiedTag
+'(PRN (-LRB- (PP (-RRB-', unclassifiedTag
+'(VP (VB (VP', unclassifiedTag
+'(S (, (PP (, (NP (VP', unclassifiedTag
+'(S (S (CC (S (.', unclassifiedTag
+'(NP (DT (NN (NN', unclassifiedTag
+'(VP (VBZ (PP', unclassifiedTag
+'(NP (DT (NN (NN (VBG (NN', unclassifiedTag
+'(VP (VB (ADJP', unclassifiedTag
+'(VP (MD (CC (MD (RB (VP', unclassifiedTag
+'(NP (JJ (NN (NN', unclassifiedTag
+'(VP (VBP (NP', unclassifiedTag
+'(ADVP (RB (RB', unclassifiedTag
+'(PP (IN (ADJP', unclassifiedTag
+'(VP (VBN (ADVP (PP', unclassifiedTag
+'(S (PP (, (NP (VP', unclassifiedTag
+'(S (S (CC (, (S (.', unclassifiedTag
+'(NP (DT (JJ (NN (NN (, (NN (, (NN (, (CC (NN (NN', unclassifiedTag
+'(NP (DT (JJ (NNS', unclassifiedTag
+'(NP (NP (, (NP', unclassifiedTag
+'(VP (VB (NP (PP', unclassifiedTag
+'(VP (VBG (PP', unclassifiedTag
+'(PP (TO (S', unclassifiedTag
+'(VP (VBP (ADJP', unclassifiedTag
+'(NP (NP (, (CC (NP (,', unclassifiedTag
+'(WHADVP (RB (WRB', unclassifiedTag
+'(VP (VBP', unclassifiedTag
+'(VP (VBG (SBAR', unclassifiedTag
+'(PP (IN (S', unclassifiedTag
+'(S (S (: (S (.', unclassifiedTag
+'(VP (VBN (ADVP', unclassifiedTag
+'(VP (VBG (NP', unclassifiedTag
+'(VP (VBZ (ADVP (VP', unclassifiedTag
+'(NP (JJ (NN (NNS', unclassifiedTag
+'(NP (NNP (CC (NNP', unclassifiedTag
+'(NP (RB', unclassifiedTag
+'(NP (PRP$ (JJ (NN (VBG (NNS', unclassifiedTag
+'(NP (NN (NNS', unclassifiedTag
+'(WHNP (WDT', unclassifiedTag
+'(SBAR (WHNP (S', unclassifiedTag
+'(NP (NP (SBAR', unclassifiedTag
+'(VP (VBG (S', unclassifiedTag
+'(VP (VBP (NP (PP (, (S', unclassifiedTag
+'(VP (VBZ (ADJP', unclassifiedTag
+'(S (PP (, (SBAR (, (NP (VP (.', unclassifiedTag
+'(VP (VBZ (RB (VP', unclassifiedTag
+'(NP (DT (JJ (NN (NNS', unclassifiedTag
+'(ADJP (JJ (RB (S', unclassifiedTag
+'(S (S (, (CC (S (.', unclassifiedTag
+'(NP (NNPS', unclassifiedTag
+'(NP (CD (NN', unclassifiedTag
+'(PP (PP (CC (PP', unclassifiedTag
+'(PRN (, (PP (,', unclassifiedTag
+'(ADJP (PRN (JJ', unclassifiedTag
+'(VP (VBZ (ADJP (ADVP (PP', unclassifiedTag
+'(VP (VB (PRT (PP', unclassifiedTag
+'(NP (JJ (JJ (NNS', unclassifiedTag
+'(NP (PRP$ (JJ (NN', unclassifiedTag
+'(VP (VBZ (NP (, (PP', unclassifiedTag
+'(NP (JJR', unclassifiedTag
+'(NP (NP (, (NP (, (CC (NP', unclassifiedTag
+'(S (PP (, (NP (VP (.', unclassifiedTag
+'(NP (PRP (CC (PRP', unclassifiedTag
+'(VP (VB', unclassifiedTag
+'(S (S (NP (VP (.', unclassifiedTag
