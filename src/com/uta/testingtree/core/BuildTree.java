@@ -15,17 +15,17 @@ import java.util.StringTokenizer;
 public class BuildTree {
 	
 	static Map<String, Node> nodeObjectMap = new HashMap<>();
-	static Tag presentTag = null;
+	static Node presentTag = null;
 	protected static Stack<String> stack=new Stack<String>();
 	
-	public Tag processTextToTree(String fileName) {
+	public Node processTextToTree(String fileName) {
 		
 		String line = "";
 		StringTokenizer stringTokens;
 		BufferedReader br = null;
 
-		Tag RootTag = null;
-		Tag tag = null;
+		Node RootTag = null;
+		Node tag = null;
 		
 		try{
 			String token = "";
@@ -40,7 +40,7 @@ public class BuildTree {
 		            String top="";
 		            if (token.indexOf(")")<0) {
 		            	if (token.indexOf("(")>=0) {
-		            		tag = new Tag(token, "", new ArrayList<Tag>());
+		            		tag = new Node(token, "", new ArrayList<Node>());
 		            		if(token.contains("NNP")) {
 		            			System.out.println("abc is abc");
 		            		}
@@ -131,14 +131,14 @@ public class BuildTree {
 		return RootTag;
 	}
 	
-	public void helper(Tag root, List<String> list)
+	public void helper(Node root, List<String> list)
     {
     	if(root==null)
     		return;
     	list.add(root.value);
     	if(root.children!=null)
     	{
-    		for(Tag child : root.children)
+    		for(Node child : root.children)
     		{
     			helper(child, list);
     		}

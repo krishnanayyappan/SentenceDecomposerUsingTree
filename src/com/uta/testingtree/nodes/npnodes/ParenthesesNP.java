@@ -1,15 +1,16 @@
 package com.uta.testingtree.nodes.npnodes;
 
 import com.uta.testingtree.core.Node;
+import com.uta.testingtree.core.Tree;
 
-public class ParenthesesNP extends Node {
+public class ParenthesesNP extends Tree {
 
 	public  ParenthesesNP() {
 		super();
 	}
 
 	@Override
-	public String processNode() {
+	public String processNode(Node currentNode) {
 		String tempWordsOfParentNode = wordsInNodeMapping;
 		
 		if(tempWordsOfParentNode.substring(0, 1).equals("#")) {

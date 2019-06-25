@@ -1,15 +1,16 @@
 package com.uta.testingtree.nodes.vpnodes;
 
 import com.uta.testingtree.core.Node;
+import com.uta.testingtree.core.Tree;
 
-public class VerbPhrase extends Node {
+public class VerbPhrase extends Tree {
 
 	public VerbPhrase() {
 		super();
 	}
 
 	@Override
-	public String processNode() {
+	public String processNode(Node currentNode) {
 		String tempWordsOfParentNode = wordsInNodeMapping;
 		
 		if(tempWordsOfParentNode.substring(0, 1).equals("#")) {

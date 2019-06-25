@@ -1,15 +1,16 @@
 package com.uta.testingtree.nodes.vpnodes;
 
 import com.uta.testingtree.core.Node;
+import com.uta.testingtree.core.Tree;
 
-public class ConjunctiveVP extends Node {
+public class ConjunctiveVP extends Tree {
 
 	public ConjunctiveVP() {
 		super();
 	}
 
 	@Override
-	public String processNode() {
+	public String processNode(Node currentNode) {
 		String tempNodeChildrenString = nodeMappingString.trim();
 		String tempWordsOfParentNode = wordsInNodeMapping.trim();
 		

@@ -1,15 +1,16 @@
 package com.uta.testingtree.nodes.unclassifiednodes;
 
 import com.uta.testingtree.core.Node;
+import com.uta.testingtree.core.Tree;
 
-public class PrepositionPhrase extends Node {
+public class PrepositionPhrase extends Tree {
 
 	public PrepositionPhrase() {
 		super();
 	}
 
 	@Override
-	public String processNode() {
+	public String processNode(Node currentNode) {
 		String tempWordsOfParentNode = wordsInNodeMapping;
 		
 		String[] stringArrayOfWords = tempWordsOfParentNode.split("#");

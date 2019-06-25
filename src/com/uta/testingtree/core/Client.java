@@ -12,9 +12,9 @@ public class Client {
 		Client client = new Client();
 		String fileName = getFileToProcess(client.folder);
 		BuildTree buildTree = new BuildTree();
-		Tag RootNode = buildTree.processTextToTree(fileName);
-		Node node = new Tree(RootNode);
-		node.processNode();
+		Node RootNode = buildTree.processTextToTree(fileName);
+		Tree root = new Root();
+		root.processNode(RootNode);
 	 }
 	 
 	 public static String getFileToProcess(File folder){

@@ -44,7 +44,25 @@
 '(NP (NP (VP', NounPhrase
 '(VP (VBZ (NP', VerbPhrase
 '(S (NP (VP (.', SimpleSentence
-'(ROOT (S', Root
+'(NP', SimpleNP
+'(S', SimpleS
+'(VP', SimpleVP
+'(PRN', SimplePRN
+'(DT', SimpleDT
+'(NN', SimpleNN
+'(CC', SimpleCC
+'(JJ', SimpleJJ
+'(NNP', SimpleNNP
+'(LRB', SimpleLRB
+'(RRB', SimpleRRB
+'(VBZ', SimpleVBZ
+'(VBN', SimpleVBN
+'(TO', SimpleTO
+'(VB', SimpleVB
+'(NNS', SimpleNNS
+'(PP', SimplePP
+'(,', SimpleComa
+'(.', SimpleFullstop
 '(NP (DT (NN', unclassifiedTag
 '(NP (DT (JJ (NN (NN', unclassifiedTag
 '(NP (JJ (NN', unclassifiedTag

@@ -1,21 +1,41 @@
 package com.uta.testingtree.core;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Stack;
 
 public abstract class Node {
+
 	
-	static String fileName = null;
-	protected static Stack<String> stack=new Stack<String>();
+	public String name; //(NP
+	public String tagName; // (NP (NN (NN (CC (NN (NNP
+	public String value; //Text value
+	public Node parent; 
+	public List<Node> children;
 	
-	protected static String nodeMappingString = "";
-	protected static String wordsInNodeMapping = "";
+	public Node() { }
 	
-	protected static List<String> finalSimpleSentences = new ArrayList<String>();
+	public Node(String name, String value) {
+		this.name = name;
+		this.value = value;
+	}
 	
-  
-	public abstract String processNode(); 
+	public Node(String name, String value, List<Node> children) {
+		this.name = name;
+		this.value = value;
+		this.children = children;
+	}
 	
+	public Node(String name, String value, List<Node> children, Node parent) {
+		this.name = name;
+		this.value = value;
+		this.children = children;
+		this.parent = parent;
+	}
 	
+	public boolean hasChildren() {
+		return children.size()>0 ;
+	}
+	
+	public boolean removeChild(Node child) {
+		return children.remove(child) ;
+	}
 }

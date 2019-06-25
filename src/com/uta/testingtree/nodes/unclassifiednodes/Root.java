@@ -1,15 +1,16 @@
 package com.uta.testingtree.nodes.unclassifiednodes;
 
 import com.uta.testingtree.core.Node;
+import com.uta.testingtree.core.Tree;
 
-public class Root extends Node {
+public class Root extends Tree {
 
 	public Root() {
 		super();
 	}
 
 	@Override
-	public String processNode() {
+	public String processNode(Node currentNode) {
 		String tempWordsOfParentNode = wordsInNodeMapping;
 		
 		String[] stringArrayOfWords = tempWordsOfParentNode.split("#");

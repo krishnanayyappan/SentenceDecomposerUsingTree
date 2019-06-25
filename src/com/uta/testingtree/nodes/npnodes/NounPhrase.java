@@ -1,15 +1,16 @@
 package com.uta.testingtree.nodes.npnodes;
 
 import com.uta.testingtree.core.Node;
+import com.uta.testingtree.core.Tree;
 
-public class NounPhrase extends Node {
+public class NounPhrase extends Tree {
 
 	public NounPhrase() {
 		super();
 	}
 
 	@Override
-	public String processNode() {
+	public String processNode(Node currentNode) {
 		
 		String tempWordsOfParentNode = wordsInNodeMapping;
 		
